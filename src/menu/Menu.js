@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import {TabMenu} from 'primereact/components/tabmenu/TabMenu';
-
+import Home from '../home/Home'
+import CarTable from '../datatable/CarTable'
 export default class Menu extends Component {
 
-  render() {
 
+  render() {
     var items=[
-      {label: 'Stats', icon: 'fa-bar-chart'},
-      {label: 'Calendar', icon: 'fa-calendar'},
-      {label: 'Documentation', icon: 'fa-book'},
-      {label: 'Support', icon: 'fa-support'},
-      {label: 'Social', icon: 'fa-twitter'}
+      {label: 'Home', icon: 'fa-home', command: ()=>{this.props.changeMenu(<Home/>);}},
+      {label: 'CarTable', icon: 'fa-table', command: ()=>{this.props.changeMenu(<CarTable/>);}}
     ];
+
     return (
       <div>
         <TabMenu model={items}/>

@@ -4,17 +4,30 @@ import './App.css';
 import 'primereact/resources/themes/omega/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'font-awesome/css/font-awesome.css';
+
+import Header from './common/header/Header'
 import Menu from './menu/Menu'
+import Home from './home/Home'
+// import CarTable from './datatable/CarTable'
 
 class App extends Component {
+  constructor() {
+      super();
+      this.state = {
+        activeMenuItem: <Home/>
+      };
+      this.changeMenu = this.changeMenu.bind(this);
+  }
+  changeMenu(e) {
+    this.setState({activeMenuItem: e});
+  }
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <Menu/>
+        <Header className="Baml-header"/>
+        <Menu changeMenu={this.changeMenu}/>
+        {this.state.activeMenuItem}
+
       </div>
     );
   }
