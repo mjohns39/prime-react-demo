@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header className="Baml-header"/>
+        <Header className="Demo-header"/>
         <Menu changeMenu={this.changeMenu}/>
         {this.state.activeMenuItem}
 

@@ -35,7 +35,7 @@ export default class CarTable extends Component {
             return <Column key={col.field} field={col.field} header={col.header} />;
           });
     return (
-      <div className="Baml-home">
+      <div className="Demo-home">
         <DataTable value={this.state.cars}>
           {dynamicColumns}
         </DataTable>

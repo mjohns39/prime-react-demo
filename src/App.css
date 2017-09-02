@@ -23,7 +23,7 @@
   to { transform: rotate(360deg); }
 }
 
-.Baml-header {
+.Demo-header {
   background-color: #222;
   height: 100px;
   /*padding: 20px;*/
@@ -34,7 +34,7 @@
   background-position: center center;
 }
 
-.Baml-home {
+.Demo-home {
   position: relative;
   height: 100%;
   color: blue;
